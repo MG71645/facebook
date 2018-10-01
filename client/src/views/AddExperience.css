@@ -1,0 +1,11 @@
+.AddExperience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing) 0;
+}
+
+.experience-form {
+    width: 100%;
+    max-width: 640px;
+}

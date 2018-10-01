@@ -1,0 +1,133 @@
+[element~="field-container"]
+    cursor: text
+    display: grid
+    grid-auto-flow: column
+    grid-template-columns: 1fr
+    grid-gap: 8px
+    position: relative
+    //width: 100%
+
+[element~="field-placeholder"]
+    cursor: text
+    user-select: none
+    pointer-events: none
+    grid-row: 1
+    grid-column: 1
+    display: flex
+    align-items: center
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    color: #ccc
+
+[element~="field-input"]
+    grid-row: 1
+    grid-column: 1
+
+[element~="field-tags"]
+    grid-row: 1
+    grid-column: 1
+    margin: 0 -4px
+    width: calc(100% + 8px)
+    > *
+        display: inline-block
+        margin: 0 4px
+
+[element~="field-tag"]
+    cursor: pointer
+    &:hover
+        text-decoration: line-through
+
+[element~="field-tags-input"]
+    min-width: 1px
+    max-width: 100%
+
+[element~="field-button"]
+    cursor: pointer
+    display: flex
+    justify-content: center
+    align-items: center
+
+[element~="field-clear"]
+    &:before
+        content: '×'
+
+[element~="field-decrease"]
+    &:before
+        content: '–'
+
+[element~="field-increase"]
+    &:before
+        content: '+'
+
+[element~="field-arrow"]
+    &:before
+        content: '▾'
+
+[element~="field-options"]
+    display: none
+    position: absolute
+    top: 100%
+    left: 0
+    right: 0
+    z-index: 1
+    overflow: hidden
+    background: white
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .15)
+    [state~="focus"] &
+        display: block
+
+[element~="field-option"]
+    cursor: pointer
+    &:hover
+        background: #1e88e5
+        color: white
+
+
+
+
+
+[element~="textarea-container"]
+    cursor: text
+    display: grid
+    grid-auto-flow: column
+    grid-template-columns: 1fr
+    grid-gap: 8px
+    position: relative
+    //width: 100%
+
+[element~="textarea-placeholder"]
+    cursor: text
+    user-select: none
+    pointer-events: none
+    grid-row: 1
+    grid-column: 1
+    display: flex
+    align-items: center
+    color: #ccc
+
+[element~="textarea-input"]
+    grid-row: 1
+    grid-column: 1
+    width: 100%
+    word-break: break-word
+
+[element~="textarea-button"]
+    cursor: pointer
+    display: flex
+    justify-content: center
+    align-items: center
+
+[element~="textarea-clear"]
+    &:before
+        content: '×'
+
+
+
+
+
+[element~="uploader-container"]
+    cursor: pointer
+    display: flex
+    input
+        display: none !important

@@ -1,0 +1,23 @@
+.postcreator-footer {
+    background: rgba(0, 0, 0, .04);
+}
+
+.postcreator-textarea[element="textarea-container"] {
+    padding: var(--spacing);
+}
+
+.postcreator-attachment {
+    padding: var(--spacing);
+}
+
+.postcreator-icons {
+    padding: 0 var(--spacing);
+    color: #aaa;
+}
+
+.postcreator-button {
+    padding: 0 var(--spacing);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+}

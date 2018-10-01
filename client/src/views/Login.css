@@ -1,0 +1,11 @@
+.Login {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing) 0;
+}
+
+.login-form {
+    max-width: 400px;
+}

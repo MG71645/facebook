@@ -1,0 +1,327 @@
+\:root
+    --font-family: sans-serif
+    --font-size: 13px
+    --line-height: 16px
+    --background: #F1F1F1
+    --color: #555
+
+    --layout-width: 800px
+    --layout-padding: 16px
+
+    --button-background: rgba(0, 0, 0, .06)
+    --button-text: inherit
+
+    --primary-border: #1976D2
+    --primary-background: #2196F3
+    --primary-background-active: #1e88e5
+
+    --primary-field-border: #2196F3
+    --primary-button-background: #2196F3
+    --primary-button-text: white
+
+    --success-border: #8BC34A
+    --success-background: #DCEDC8
+
+    --danger-border: red
+    --danger-background: red
+    --danger-text: red
+
+    --danger-field-border: red
+    --danger-button-background: red
+    --danger-button-text: white
+
+    --field-border: rgba(0, 0, 0, .1)
+
+    --border-width: 2px
+    --border-radius: 4px
+
+    --box-shadow: 0 8px 32px rgba(0, 0, 0, .25)
+
+    --card-background: white
+    --card-shadow: 0 1px 2px rgba(0, 0, 0, .15)
+
+    --height: 36px
+    --padding: 12px
+    --spacing: 16px
+
+    --icon-size: 24px
+
+html
+    background: var(--background)
+    font-family: var(--font-family)
+    font-size: var(--font-size)
+    line-height: var(--line-height)
+    color: var(--color)
+
+.h1
+    font-size: 400%
+    line-height: 1
+
+.h2
+    font-size: 200%
+    line-height: 1
+
+.h3
+    font-size: 140%
+    line-height: 1
+
+.mg-bolder
+    font-weight: bolder
+
+.mg-weaker
+    color: #ccc
+
+
+
+
+
+.mg-layout
+    margin: 0 auto
+    width: 100%
+    max-width: calc(var(--layout-width) + 2 * var(--layout-padding))
+    padding: 0 var(--layout-padding)
+
+.mg-header
+    height: 48px
+    padding: 0 calc(50% - var(--width) / 2)
+    background: var(--card-background)
+    box-shadow: var(--card-shadow)
+
+.mg-footer
+    background: rgba(0, 0, 0, .08)
+
+.mg-card
+    background: var(--card-background)
+    border-radius: var(--border-radius)
+    box-shadow: var(--card-shadow)
+
+.mg-group
+    display: flex
+    > *
+        &:not(:first-child)
+            border-top-left-radius: 0
+            border-bottom-left-radius: 0
+        &:not(:last-child)
+            border-top-right-radius: 0
+            border-bottom-right-radius: 0
+
+
+
+
+
+.mg-field
+    &[element~="field-container"]
+        grid-gap: 0
+        box-shadow: 0 0 0 var(--border-width) var(--field-border) inset
+        border-radius: var(--border-radius)
+        &[state~="focus"]
+            --field-border: var(--primary-field-border)
+    &[element~="field-input"]
+        line-height: var(--height)
+        padding: 0 var(--padding)
+    &[element~="field-placeholder"]
+        height: var(--height)
+        padding: 0 var(--padding)
+    &[element~="field-button"]
+        --thikness: 2px
+        --color: black
+        opacity: .15
+        cursor: pointer
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 14px
+        margin-right: var(--padding)
+        &:before, &:after
+            display: block
+            height: var(--thikness)
+            border-radius: 1000px
+            background: var(--color)
+    &[element~="field-clear"]
+        &:before
+            content: ''
+            width: 10px
+            transform: rotate(45deg)
+        &:after
+            content: ''
+            position: absolute
+            width: 10px
+            transform: rotate(-45deg)
+    &[element~="field-decrease"]
+        &:before
+            content: ''
+            width: 10px
+    &[element~="field-increase"]
+        &:before
+            content: ''
+            width: 10px
+        &:after
+            content: ''
+            position: absolute
+            width: 10px
+            transform: rotate(90deg)
+    &[element~="field-arrow"]
+        &:before
+            content: ''
+            width: 6px
+            margin-top: 4px
+            margin-left: -1px
+            transform-origin: right center
+            transform: rotate(36deg)
+        &:after
+            content: ''
+            width: 6px
+            margin-top: 4px
+            transform-origin: left center
+            transform: rotate(-36deg)
+    &[element~="field-options"]
+        top: calc(100% + 8px)
+        background: var(--card-background)
+        box-shadow: var(--box-shadow)
+        border-radius: var(--border-radius)
+    &[element~="field-option"]
+        line-height: var(--height)
+        padding: 0 var(--padding)
+        &:hover
+            background: var(--primary-background)
+            color: white
+    &[element~="field-tags"]
+        --tag-spacing: 4px
+        margin: 0
+        width: calc(100% + var(--tag-spacing))
+        padding: calc(var(--border-width) + var(--tag-spacing) / 2)
+        > *
+            margin: calc(var(--tag-spacing) / 2)
+            line-height: calc(var(--height) - (2 * var(--border-width)) - (2 * var(--tag-spacing)))
+            padding: 0 calc(var(--padding) - var(--tag-spacing) - var(--border-width))
+    &[element~="field-tag"]
+        border-radius: var(--border-width)
+        background: rgba(0, 0, 0, .1)
+        &:hover
+            text-decoration: none
+            background: red
+            color: white
+
+
+
+
+
+.mg-button
+    user-select: none
+    //display: inline-block // conflicting with display attribute
+    height: var(--height)
+    line-height: var(--height)
+    padding: 0 var(--padding)
+    border-radius: var(--border-radius)
+    background: var(--button-background)
+    color: var(--button-text)
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+
+
+
+
+
+.mg-textarea
+    &[element~="textarea-container"]
+        padding: 0 var(--padding)
+        box-shadow: 0 0 0 var(--border-width) var(--field-border) inset
+        border-radius: var(--border-radius)
+        &[state~="focus"]
+            --field-border: var(--primary-field-border)
+    &[element~="textarea-placeholder"]
+        height: var(--height)
+    &[element~="textarea-input"]
+        margin: calc((var(--height) - var(--line-height)) / 2) 0
+        min-height: calc(var(--line-height) * var(--minrows))
+        height: calc(var(--line-height) * var(--rows))
+        max-height: calc(var(--line-height) * var(--maxrows))
+        overflow: auto
+    &[element~="textarea-button"]
+        --thikness: 2px
+        --color: black
+        opacity: .15
+        cursor: pointer
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 14px
+        &:before, &:after
+            display: block
+            height: var(--thikness)
+            border-radius: 1000px
+            background: var(--color)
+    &[element~="textarea-clear"]
+        &:before
+            content: ''
+            width: 10px
+            transform: rotate(45deg)
+        &:after
+            content: ''
+            position: absolute
+            width: 10px
+            transform: rotate(-45deg)
+
+
+
+
+
+.mg-checkbox
+    display: inline-block
+    position: relative
+    width: var(--font-size)
+    height: var(--font-size)
+    border-radius: var(--border-radius)
+    background: rgba(0, 0, 0, .1)
+    [state~="checked"] &
+        &:before
+            content: ''
+            display: block
+            position: absolute
+            top: 20%
+            left: 20%
+            width: 60%
+            height: 60%
+            background: #8bc34a
+            border-radius: calc(var(--border-radius) / 2)
+
+
+
+
+
+.mg-success
+    --field-border: var(--success-input-border)
+    --button-background: var(--success-button-background)
+    --button-text: var(--success-button-text)
+
+.mg-danger
+    --field-border: var(--danger-field-border)
+    --button-background: var(--danger-button-background)
+    --button-text: var(--danger-button-text)
+
+.mg-primary
+    --field-border: var(--primary-field-border)
+    --button-background: var(--primary-button-background)
+    --button-text: var(--primary-button-text)
+
+
+
+
+
+.mg-head
+    border-bottom: 1px solid rgba(0, 0, 0, .15)
+    font-weight: bold
+
+.mg-row
+    height: var(--height)
+
+
+
+
+
+.mg-avatar
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    background: center center / cover no-repeat

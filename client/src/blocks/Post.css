@@ -1,0 +1,49 @@
+.Post {
+
+}
+
+.post {
+
+}
+
+.post-header {
+    padding: var(--spacing);
+}
+
+.post-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .15) center center / cover no-repeat;
+}
+
+.post-body {
+    padding: 0 var(--spacing);
+}
+
+.post-controls {
+    padding: var(--spacing);
+}
+
+.post-control[state~="checked"] {
+    color: red;
+}
+
+.post-comments {
+    padding: var(--spacing);
+}
+
+.post-comment {
+    border-bottom-left-radius: var(--border-radius);
+    background: rgba(0, 0, 0, .04);
+}
+
+.comment-textarea[element="textarea-container"] {
+    padding: var(--spacing);
+}
+
+.comment-submit {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+}

@@ -1,0 +1,6 @@
+.User {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-gap: var(--spacing);
+    padding: var(--spacing) 0;
+}

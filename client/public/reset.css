@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0; }
+
+h1, h2, h3 {
+  margin: 0;
+  font: inherit; }
+
+p {
+  margin: 0; }
+
+a {
+  outline: none;
+  color: inherit;
+  text-decoration: inherit;
+  font: inherit; }
+
+label {
+  display: inline-block; }
+
+input {
+  padding: 0;
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  font: inherit;
+  color: inherit; }
+  input[type="number"], input[type="datetime-local"], input[type="month"] {
+    -moz-appearance: textfield; }
+    input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button, input[type="datetime-local"]::-webkit-outer-spin-button, input[type="datetime-local"]::-webkit-inner-spin-button, input[type="month"]::-webkit-outer-spin-button, input[type="month"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0; }
+  input:disabled {
+    cursor: not-allowed;
+    color: inherit; }
+
+button {
+  cursor: pointer;
+  user-select: none;
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: inherit; }
+  button:disabled {
+    cursor: not-allowed;
+    color: inherit; }
+
+option {
+  padding: 0;
+  font: inherit;
+  color: inherit; }
+
+[contenteditable] {
+  cursor: text;
+  outline: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: unset;
+  text-align: left; }
+
+th {
+  padding: 0;
+  font: inherit; }
+
+td {
+  padding: 0; }
+
+/*# sourceMappingURL=reset.css.map */

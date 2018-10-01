@@ -1,0 +1,11 @@
+.Registration {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing) 0;
+}
+
+.registration-form {
+    max-width: 400px;
+}

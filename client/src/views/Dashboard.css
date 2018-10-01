@@ -1,0 +1,15 @@
+.Dashboard {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing) 0;
+}
+
+.dashboard-profile {
+    width: 100%;
+}
+
+.experience-table {
+    width: 100%;
+}

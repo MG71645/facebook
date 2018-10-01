@@ -1,0 +1,10 @@
+.CreateProfile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing) 0;
+}
+
+.create-profile-form {
+    max-width: 640px;
+}
